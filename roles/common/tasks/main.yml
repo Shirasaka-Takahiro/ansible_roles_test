@@ -1,0 +1,5 @@
+##yum update
+- name: yum update
+  yum:
+    name: '*'
+    state: latest

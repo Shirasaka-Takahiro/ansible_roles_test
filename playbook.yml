@@ -1,0 +1,8 @@
+- hosts: target_hosts
+  bebome: true
+  user: vagrant
+  roles:
+    - common
+    - httpd
+    - mysql
+    - php
