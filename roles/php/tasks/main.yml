@@ -1,0 +1,16 @@
+---
+- name: install php
+  yum: 
+    name: "{{item}}" 
+    state: latest
+  with_items:
+    - php
+    - php-devel
+    - php-mbstring
+    - php-mysql
+    - php-gd
+
+- name: copy php.ini
+  copy:
+    src: php.ini
+    dest: /etc
