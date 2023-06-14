@@ -5,7 +5,7 @@
     name: '*'
     state: latest
 
-##add SWAP
+##Add SWAP
 - name: add swap
   set_fact:
     swap_file_path: /swap.img
@@ -43,13 +43,39 @@
     dump: '0'
     state: present
 
-##disable SELinux
-- name: install python module for selinux
+##install selinux library
+- name: install libselinux-python
   yum:
-  name: libselinux-python
-    state: installed
+    name: libselinux-python
+    state: present
 
+##disable SELinux
 - name: disable selinux
   selinux: 
     state: disabled
   register: selinux
+
+##disable firewalld
+- name: disable firewalld
+  service:
+    name: firewalld
+    state: stopped
+    enabled: no
+
+##install optional packages
+- name: install optional packages
+  yum:
+    name: "{{item}}" 
+    state: present
+  with_items:
+    - net-tools
+    - vim
+    - bind-utils
+    - zip
+    - unzip
+    - wget
+
+##change Timezone
+- name: change Timezone
+  timezone:
+    name: Asia/Tokyo
