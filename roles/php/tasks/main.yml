@@ -12,5 +12,5 @@
 
 - name: copy php.ini
   copy:
-    src: php.ini
+    src: ../templates/php.ini
     dest: /etc

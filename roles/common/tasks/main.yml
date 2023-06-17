@@ -5,8 +5,8 @@
     name: '*'
     state: latest
 
-##Add SWAP
-- name: add swap
+##create SWAP
+- name: create swap
   set_fact:
     swap_file_path: /swap.img
 
@@ -79,3 +79,11 @@
 - name: change Timezone
   timezone:
     name: Asia/Tokyo
+
+##create user
+- name: create user
+  user:
+    name: "{{ user_name }}"
+    password: "{{ user_password | password_hash('sha512') }}"
+    #groups: "{{ user_groups }}"
+    generate_ssh_key: yes
