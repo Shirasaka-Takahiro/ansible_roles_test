@@ -12,7 +12,7 @@
 
 - name: create vhost direstory
   file:
-    path: /var/www/vhosts/"{{ domain_name }}"/public_html
+    path: /var/www/vhosts/{{ domain_name }}/public_html
     state: directory
     mode: "0755"
     recurse: yes
@@ -20,11 +20,11 @@
 - name: copy index.html
   copy:
     src: ../templates/index.html
-    dest: /var/www/vhosts/"{{ domain_name }}"/public_html
+    dest: /var/www/vhosts/{{ domain_name }}/public_html
     
 - name: copy test.com.conf
   copy:
     src: ../templates/test.com.conf
-    dest: /etc/httpd/conf.d/"{{ domain_name }}".conf
+    dest: /etc/httpd/conf.d/{{ domain_name }}.conf
   notify:
     - restart httpd

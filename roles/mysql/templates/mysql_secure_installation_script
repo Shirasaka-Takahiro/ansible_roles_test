@@ -26,6 +26,3 @@ expect -c '
     expect "Reload privilege tables now?";
     send "y\n";
     interact;'
-
-# change authentication plugin for root
-mysql --user root --password="{{ root_password }}" --execute="ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '{{ root_password }}';"

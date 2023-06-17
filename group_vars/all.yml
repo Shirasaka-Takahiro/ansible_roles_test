@@ -9,6 +9,3 @@ domain_name: test.com
 
 ##MySQL
 root_password: Testtest991!
-db_user_name: test_user
-db_user_password: Kenshirou913!
-db_name: test_db

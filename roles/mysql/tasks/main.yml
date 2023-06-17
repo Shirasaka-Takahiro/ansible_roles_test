@@ -60,20 +60,3 @@
 
 - name: exec mysql_secure_installation_script
   shell: "/tmp/mysql_secure_installation_script"
-
-- name: create mysql user
-  mysql_user:
-    login_user: root
-    login_password: "{{ root_password }}"
-    name: "{{ db_user_name }}"
-    password: "{{ db_user_password }}"
-    priv: "*.*:ALL"
-    host: localhost
-    state: present
-
-- name: create mysql database
-  mysql_db:
-    login_user: root
-    login_password: "{{ root_password }}"
-    name: "{{ db_name }}"
-    state: present
