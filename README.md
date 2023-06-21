@@ -1,4 +1,4 @@
-■This a Ansible Repository with Roles
+■This is an Ansible Repository with Roles
 
 
 ■Roles
