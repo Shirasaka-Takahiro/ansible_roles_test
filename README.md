@@ -8,7 +8,7 @@
 ・php
 
 ■Deploy
-1. Change user,Keys,playbook.yml,hosts,vhosts,index.html
+1. Change group_vars,user,Keys,playbook.yml,hosts,vhosts,index.html
 2. Dry run
 ansible-playbook --private-key {PATH} -i {PATH} hosts {PATH} -C
 3. Run 

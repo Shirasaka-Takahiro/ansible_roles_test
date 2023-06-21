@@ -3,7 +3,8 @@
   become: true
   user: vagrant
   roles:
+    - test_access
     #- common
-    - httpd
+    #- httpd
     #- mysql
     #- php

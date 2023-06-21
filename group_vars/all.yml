@@ -5,7 +5,7 @@ user_password: Test1!
 #user_groups: test1
 
 ##Apache
-domain_name: onya-lab.site
+domain_name: test.com
 
 ##MySQL
 root_password: Testtest991!
