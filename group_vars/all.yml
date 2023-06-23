@@ -4,8 +4,11 @@ user_name: test1
 user_password: Test1!
 #user_groups: test1
 
+##change hostname
+host_name: test-web01
+
 ##Apache
-domain_name: test.com
+domain_name: ftp.onya-lab.site
 
 ##MySQL
 root_password: Testtest991!

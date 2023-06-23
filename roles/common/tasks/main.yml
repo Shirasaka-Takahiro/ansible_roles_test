@@ -80,6 +80,10 @@
   timezone:
     name: Asia/Tokyo
 
+##change hostname
+- name: change hostname
+  command: hostnamectl set-hostname "{{ host_name }}"
+
 ##create user
 - name: create user
   user:

@@ -1,10 +1,10 @@
 ---
 - hosts: target_hosts
   become: true
-  user: vagrant
+  user: ec2-user
   roles:
     - test_access
-    #- common
-    #- httpd
-    #- mysql
-    #- php
+    - common
+    - httpd
+    - mysql
+    - php
