@@ -2,7 +2,7 @@
 
 
 ■Roles
-・common(yum update,swap,SELinux,firewalld,Timezone,useradd)
+・common(yum update,swap,SELinux,firewalld,hostname,Timezone,useradd)
 ・httpd
 ・mysql
 ・php

@@ -8,7 +8,7 @@ user_password: Test1!
 host_name: test-web01
 
 ##Apache
-domain_name: ftp.onya-lab.site
+domain_name: test.com
 
 ##MySQL
 root_password: Testtest991!
